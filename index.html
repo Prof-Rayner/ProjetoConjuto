@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class"display">
+        <span id="result">0</span>
+    </div>
+    <header class="calculadora">
+        <div class="partesprincipais">
+            <button onclick="porcentagemDeNumero('%')">%</button>
+            <button onclick="apagaHistorico()">CE</button>
+            <button onclick="">C</button>
+        </header>
+        
+        <main>
+            <div class="botton-values">
+                <button onclick="adicionarNumero('7')">7</button>
+                <button onclick="adicionarNumero('8')">8</button>
+                <button onclick="adicionarNumero('9')">9</button>
+                <button onclick="adicionarNumero('4')">4</button>
+                <button onclick="adicionarNumero('5')">5</button>
+                <button onclick="adicionarNumero('6')">6</button>
+                <button onclick="adicionarNumero('1')">1</button>
+                <button onclick="adicionarNumero('2')">2</button>
+                <button onclick="adicionarNumero('3')">3</button>
+                <button onclick="adicionarNumero('0')">0</button>
+                <button onclick="adicionarVirgula()">,</button>
+            </div>
+        </main>
+
+        <aside class="bottons-laterais">
+            <button onclick="apagarNumero()"">DEL</button>
+            <button onclick="dividirNumero()"">/</button>
+            <button onclick="multiplicarNumero()">*</button>
+            <button onclick="diminuirNumero()">-</button>
+            <button onclick="somarNumero()">+</button>
+            <button class="igual">=</button>
+        </aside>
+    </div>
+</body>
+</html>

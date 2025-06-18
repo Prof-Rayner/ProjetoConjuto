@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="mycalc">
+<form name="Calculadora" id="calculadora">
+<input type="text" name="inputwindow" id="inputwindow">
+<div>
+<input type="button" id="um" value="1" onclick="takeValue(document.getElementById('um').value)">
+<input type="button" id="dois" value="2" onclick="takeValue(document.getElementById('dois').value)">
+<input type="button" id="tres" value="3" onclick="takeValue(document.getElementById('tres').value)">
+<input type="button" id="adc" value="+" onclick="takeValue(document.getElementById('adc').value)">
+    </div>
+    
+    <div>
+<input type="button" id="quatro" value="4" onclick="takeValue(document.getElementById('quatro').value)">
+<input type="button" id="cinco" value="5" onclick="takeValue(document.getElementById('cinco').value)">
+<input type="button" id="seis" value="6" onclick="takeValue(document.getElementById('seis').value)">
+<input type="button" id="sub" value="-" onclick="takeValue(document.getElementById('sub').value)">
+</div>
+<div>
+<input type="button" id="sete" value="7" onclick="takeValue(document.getElementById('sete').value)">
+<input type="button" id="oito" value="8" onclick="takeValue(document.getElementById('oito').value)">
+<input type="button" id="nova" value="9" onclick="takeValue(document.getElementById('nove').value)">
+<input type="button" id="mult" value="*" onclick="takeValue(document.getElementById('mult').value)">
+    </div>
+    
+    <div>
+<input type="button" id="zero" value="0" onclick="takeValue(document.getElementById('zero').value)">
+<input type="button" id="decimal" value="." onclick="takeValue(document.getElementById('decimal').value)">
+<input type="button" id="divisao" value="/" onclick="takeValue(document.getElementById('divisao').value)">
+    </div>
+    
+    <div class="results">
+<input type="button" id="igual" value="=" onclick="calculateResult()">
+<button type="button" id="C" value="" onclick="clearInput(document.getElementById('C').value)">C</button>
+    </div>
+ 
+</form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

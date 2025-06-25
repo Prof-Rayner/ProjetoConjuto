@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(45deg, #000000, #2a2a2a);
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.fundo {
+    width: 100%;
+    max-width: 400px; /* Largura máxima aumentada */
+}
+
+.calculadora {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 50px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+#resultado { 
+    background-color: #222;
+    height: 80px; /* Altura aumentada */
+    margin: 0 0 20px 0;
+    font-size: 40px; /* Fonte maior */
+    color: #fff;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; /* Espaçamento entre botões */
+}
+
+button {
+    background-color: #333;
+    color: white;
+    font-size: 30px; /* Tamanho de fonte aumentado */
+    height: 80px; /* Altura aumentada */
+    cursor: pointer;
+    width: 70px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0 #222;
+}
+
+button:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #222;
+}
+
+/* Estilo para botões de operação */
+.operacao {
+    background-color: #ff9500;
+    box-shadow: 0 4px 0 #cc7700;
+}
+
+.operacao:hover {
+    background-color: #ffaa33;
+}
+
+/* Estilo para botões especiais (C, =, etc.) */
+.especial {
+    background-color: #a5a5a5;
+    color: black;
+    box-shadow: 0 4px 0 #7a7a7a;
+}
+
+.especial:hover {
+    background-color: #c5c5c5;
+}
+
+/* Botão de igualdade destacado */
+.igual {
+    background-color: #ff9500;
+    grid-column: span 2; /* Ocupa 2 colunas */
+}

@@ -48,7 +48,7 @@ function apagar() {
 
 function Calcular() {
     if (primeiroNumero === '' || segundoNumero === '' || operadorAtual === '') {
-        saida.textContent = 'Adicione um operador'; 
+        saida.textContent = 'Erro'; 
         primeiroNumero = ''; 
         segundoNumero = '';
         operadorAtual = '';

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #edf1f4;
+}
+
+.calculadora {
+  position: relative;
+  width: 340px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1), -15px -15px 20px #fffb;
+  text-align: center;
+}
+
+.calculadora h1 {
+  margin-bottom: 20px;
+  color: #5166d6;
+}
+
+#saida {
+  user-select: none;
+  overflow: hidden;
+  width: 100%;
+  text-align: end;
+  color: #5166d6;
+  height: 100px;
+  line-height: 100px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.calculadora .botoes {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calculadora .botoes button {
+  position: relative;
+  padding: 15px 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #666;
+  border: 2px solid #edf1f4;
+  background: #edf1f4;
+  transition: all 0.2s ease;
+}
+
+.calculadora .botoes button:active {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
+  transform: scale(0.98);
+}
+
+.calculadora .botoes button:nth-child(1) {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+}
+
+.calculadora .botoes button:nth-child(1):active {
+  background-color: #ff1500;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), 
+inset -5px -5px 10px #ff3e28;
+}
+
+.calculadora .botoes button:nth-child(4),
+.calculadora .botoes button:nth-child(8),
+.calculadora .botoes button:nth-child(12),
+.calculadora .botoes button:nth-child(16) {
+  color: #666;
+  font-weight: bold;
+}
+
+.calculadora .botoes button:nth-child(15) {
+  background-color: #2196f3;
+  color: white;
+  font-weight: bold;
+  grid-column: span 1;
+}
+
+.calculadora .botoes button:nth-child(15):active {
+  background-color: #0088f0;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #3da1ff;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}

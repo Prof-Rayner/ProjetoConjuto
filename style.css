@@ -1,0 +1,137 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+    display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #333333, #76ccb1);
+    font-family: Arial, sans-serif;
+}
+
+
+.calculator {
+  background: rgba(255, 255, 255, 0.75);
+ padding: 20px;
+ border-radius: 10px;
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+ width: 300px;
+  color: #232323;
+}
+
+
+#display {
+ background-color: #000;
+ color: wheat;
+ font-size: 2em;
+ text-align: right;
+ padding: 15px;
+ border-radius: 5px;
+ margin-bottom: 10px;
+ height: 50px;
+ overflow: hidden;
+}
+
+.calculator-buttons {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 10px;
+}
+
+.calculator-buttons button {
+ padding: 20px;
+font-size: 1.2em;
+border: none;
+ border-radius: 10px;
+ background-color: #444;
+ color: white;
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+
+.calculator-buttons button:hover {
+ background-color: #666;
+}
+
+
+#igual {
+  color: wheat;
+    background-color: #334943b7;
+}
+
+#igual:hover {
+background-color: #373d42;
+}
+
+#limparDisplay{
+    background-color: rgba(179, 47, 47, 0.89);
+  color: wheat;
+}
+
+#limparDisplay:hover {
+background-color: #788086;
+
+}
+
+#limparCalculo{
+    color: wheat;
+     background-color: rgba(117, 29, 29, 0.781);
+}
+#limparCalculo:hover{
+    background-color: #788086;
+}
+
+#tecla7, #tecla8 ,#tecla9{
+    color: wheat;
+    background-color: #597e73b7;
+}
+
+#tecla7:hover, #tecla8:hover,#tecla9:hover{
+     background-color: #788086;
+}
+
+
+#tecla4, #tecla5, #tecla6, #tecla1, #tecla2, #tecla3{
+    color: wheat;
+    background-color: #597e73b7;
+}
+
+#tecla4:hover, #tecla5:hover,#tecla6:hover,  #tecla1:hover, #tecla2:hover, #tecla3:hover{
+     background-color: #788086;
+}
+
+#inverter, #decimal, #operadorAdicionar, #operadorDividir, #operadorMultiplicar,
+#operadorSubtrair{
+        color: wheat;
+    background-color: #333333d2;
+
+}
+
+#inverter:hover, #decimal:hover, #operadorAdicionar:hover, #operadorDividir:hover, #operadorMultiplicar:hover,
+#operadorSubtrair:hover{
+        
+    background-color: #788086;
+
+}
+
+#tecla0{
+    color: wheat;
+    background-color: #597e73b7;
+}
+#tecla0:hover{
+   
+    background-color: #788086;
+}
+#backspace{
+     color: wheat;
+    background-color: #293d37d5;
+}
+
+#backspace:hover{
+    background-color: #788086;
+}

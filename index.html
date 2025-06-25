@@ -9,26 +9,31 @@
     </head>
 
     <body>
-        <h1>Calculadora Básica</h1>
-
-        <input type="text" id="valor1">
-        <input type="text" id="valor2">
-
-        <button type="button" onclick="Operador('+')"> + </button>
-        <button type="button" onclick="Operador('-')"> - </button>
-        <button type="button" onclick="Operador('*')"> * </button>
-        <button type="button" onclick="Operador('/')"> / </button>
-        <button type="button" onclick="Calcular()"> = </button>
-        <br>
-
-        
-        <button type="button" onclick="apagar()"> C </button>
-
-        <br>
-
-        <h2><p id="saida">0</p></h2>
-    
-
+        <div class="calculadora">
+            <h1>Calculadora Básica</h1>
+         
+            <div class="botoes">
+                <div class="operadores">
+                    <button type="button" onclick="Operador('+')"> + </button>
+                    <button type="button" onclick="Operador('-')"> - </button>
+                    <button type="button" onclick="Operador('*')"> * </button>
+                    <button type="button" onclick="Operador('/')"> / </button>
+                    <button type="button" onclick="Calcular()"> = </button>
+                    <button type="button" onclick="apagar()"> C </button>
+                </div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>0</button>
+            </div>
+            
+            <h2><p id="saida"></p></h2>
+        </div>
     </body>
-
 </html>

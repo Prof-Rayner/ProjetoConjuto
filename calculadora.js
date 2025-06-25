@@ -14,9 +14,14 @@ function back() {
 
 function calcular() {
     var resultado = document.getElementById('resultado').innerHTML;
-    if(resultado) {
-        document.getElementById('resultado').innerHTML = eval(resultado);
-    } else {
-        document.getElementById('resultado').innerHTML = "NADA INSERIDO";
-    } 
+    try {
+        let calculo = eval(resultado);
+        if (!isFinite(calculo)) {
+            document.getElementById('resultado').innerHTML = "Erro: Divisão por zero";
+        } else {
+            document.getElementById('resultado').innerHTML = calculo;
+        }
+    } catch (e) {
+        document.getElementById('resultado').innerHTML = "Erro na expressão";
+    }
 }

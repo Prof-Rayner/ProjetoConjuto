@@ -1,0 +1,90 @@
+/* Estilo geral do corpo com um gradiente de fundo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6b48ff, #00ddeb); /* Gradiente roxo e ciano */
+    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
+}
+
+/* Estilo da calculadora com fundo suave e sombra mais pronunciada */
+.calculator {
+    background: linear-gradient(145deg, #ffffff, #e0e7ff); /* Gradiente sutil */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    max-width: 320px; /* Limita a largura para um visual mais compacto */
+}
+
+/* Display com fundo escuro e texto claro */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #2a2a2a; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    box-sizing: border-box;
+}
+
+/* Grid dos botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Estilo padrão dos botões */
+button {
+    padding: 18px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #f0f4ff, #d9e2ff); /* Gradiente claro */
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover nos botões */
+button:hover {
+    background: linear-gradient(145deg, #d9e2ff, #c0cfff); /* Gradiente mais vibrante */
+    transform: translateY(-2px); /* Efeito de elevação */
+}
+
+/* Botões de operação com cor diferente */
+button:nth-child(1), /* C */
+button:nth-child(2), /* / */
+button:nth-child(3), /* × */
+button:nth-child(4), /* - */
+button:nth-child(8) /* + */ {
+    background: linear-gradient(145deg, #ff6b6b, #ff8e8e); /* Gradiente vermelho suave */
+    color: white;
+}
+
+button:nth-child(1):hover,
+button:nth-child(2):hover,
+button:nth-child(3):hover,
+button:nth-child(4):hover,
+button:nth-child(8):hover {
+    background: linear-gradient(145deg, #ff8e8e, #ffaaaa);
+}
+
+/* Botão de igual com cor vibrante */
+.equals {
+    background: linear-gradient(145deg, #4caf50, #6dd56f); /* Gradiente verde */
+    color: white;
+}
+
+.equals:hover {
+    background: linear-gradient(145deg, #6dd56f, #8de98f);
+    transform: translateY(-2px);
+}

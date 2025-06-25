@@ -2,44 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
 </head>
 <body>
- 
-    <h1>Calculadora!</h1>
- 
-    <div class="painel">
-      <div class="numeros">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button onclick="calcular(1)">+</button>
-      </div>
-      <div class="numeros">
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button onclick="calcular(2)">-</button>
-      </div>
-      <div class="numeros">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button onclick="calcular(3)">x</button>
-      </div>
-      <div class="numeros">
-        <button>0</button>
-        <button>.</button>
-        <button onclick="calcular(5)">C</button>
-        <button onclick="calcular(4)">÷</button>
-      </div>
+    <div class="mycalc">
+<form name="Calculadora" id="calculadora">
+<input type="text" name="inputwindow" id="inputwindow">
+<div>
+<input type="button" id="um" value="1" onclick="teclaPressionada(1)">
+<input type="button" id="dois" value="2" onclick="teclaPressionada(2)">
+<input type="button" id="tres" value="3" onclick="teclaPressionada(3)">
+<input type="button" id="adc" value="+" onclick="teclaPressionada('+')">
+    </div>
+    
+    <div>
+<input type="button" id="quatro" value="4" onclick="teclaPressionada(4)">
+<input type="button" id="cinco" value="5" onclick="teclaPressionada(5)">
+<input type="button" id="seis" value="6" onclick="teclaPressionada(6)">
+<input type="button" id="sub" value="-" onclick="teclaPressionada('-')">
+</div>
+<div>
+<input type="button" id="sete" value="7" onclick="teclaPressionada(7)">
+<input type="button" id="oito" value="8" onclick="teclaPressionada(8)">
+<input type="button" id="nove" value="9" onclick="teclaPressionada(9)">
+<input type="button" id="mult" value="*" onclick="teclaPressionada('*')">
+    </div>
+    
+    <div>
+<input type="button" id="zero" value="0" onclick="teclaPressionada(0)">
+<input type="button" id="decimal" value="." onclick="teclaPressionada('.')">
+<input type="button" id="divisao" value="/" onclick="teclaPressionada('/')">
+    </div>
+    
+    <div class="results">
+<input type="button" id="igual" value="=" onclick="calculateResult()">
+<button type="button" id="C" value="" onclick="clearInput()">C</button>
     </div>
  
-    <h2>Resultado: </h2>
-    <h2 id="teste"></h2>
- 
+</form>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>

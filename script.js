@@ -1,12 +1,14 @@
-function takeValue(x) {
-document.getElementById('inputwindow').value += x;
+const tela = document.getElementById('inputwindow');
+
+function teclaPressionada(x) {
+    tela.value += x;
 }
  
-function clearInput(y) {
-document.getElementById('inputwindow').value = y;
+function clearInput() {
+    tela.value = "";
 }
  
 function calculateResult() {
-var igual = eval(document.getElementById('inputwindow').value);
-document.getElementById('inputwindow').value = igual;
+    var igual = eval(tela.value);
+    tela.value = igual;
 }

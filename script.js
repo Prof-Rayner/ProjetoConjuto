@@ -1,31 +1,94 @@
+const saida = document.getElementById('saida');
 
-let operador = "";
+let primeiroNumero = '';
+let segundoNumero = '';
+let operadorAtual = '';
+let resultadoCalculado = false;
 
-function Operador(operacao) {
-    operador = operacao
+function numeros(num) {
+    if (resultadoCalculado) {
+        saida.textContent = '';
+        primeiroNumero = '';
+        segundoNumero = '';
+        operadorAtual = '';
+        resultadoCalculado = false;
+    }
+
+    if (operadorAtual === '') {
+        primeiroNumero += num;
+        saida.textContent = primeiroNumero;
+    } else {
+        segundoNumero += num;
+        saida.textContent = segundoNumero;
+    }
+}
+
+function Operador(op) {
+    if (primeiroNumero === '' && saida.textContent === '') return;
+
+    if (segundoNumero !== '' && operadorAtual !== '') {
+        Calcular();
+        primeiroNumero = saida.textContent;
+        segundoNumero = '';
+    } else if (primeiroNumero === '' && saida.textContent !== '') {
+        primeiroNumero = saida.textContent;
+    }
+    
+    operadorAtual = op;
+    resultadoCalculado = false;
+}
+
+function apagar() {
+    saida.textContent = '';
+    primeiroNumero = '';
+    segundoNumero = '';
+    operadorAtual = '';
+    resultadoCalculado = false;
 }
 
 function Calcular() {
-    let n1 = parseInt(document.getElementById('valor1').value)
-    let n2 = parseInt(document.getElementById('valor2').value)
-    let resultado
-
-    if (operador == '+' ) {
-        resultado = n1 + n2
-    } else if (operador == '-') {
-        resultado = n1 - n2
-    } else if (operador == '*') {
-        resultado = n1 * n2
-    } else if (operador == '/') {
-        resultado = n1 / n2
-    } else {
-        print("Resultado Indefinido")
+    if (primeiroNumero === '' || segundoNumero === '' || operadorAtual === '') {
+        saida.textContent = 'Adicione um operador'; 
+        primeiroNumero = ''; 
+        segundoNumero = '';
+        operadorAtual = '';
+        resultadoCalculado = true;
+        return;
     }
-    
-    let elemento = document.getElementById("saida")
-    elemento.innerHTML = resultado
-}
 
- function apagar() {
-    document.getElementById("saida").innerHTML = 0;
+    const num1 = parseFloat(primeiroNumero);
+    const num2 = parseFloat(segundoNumero);
+    let resultado;
+
+    switch (operadorAtual) {
+        case '+':
+            resultado = num1 + num2;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            break;
+        case '*':
+            resultado = num1 * num2;
+            break;
+        case '/':
+            if (num2 === 0) {
+                saida.textContent = 'Divisão por Zero';
+                primeiroNumero = '';
+                segundoNumero = '';
+                operadorAtual = '';
+                resultadoCalculado = true;
+                return;
+            }
+            resultado = num1 / num2;
+            break;
+        default:
+            saida.textContent = 'Erro';
+            return;
+    }
+
+    saida.textContent = resultado;
+    primeiroNumero = resultado.toString();
+    segundoNumero = '';
+    operadorAtual = '';
+    resultadoCalculado = true;
 }
